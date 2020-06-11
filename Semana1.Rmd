@@ -1,0 +1,46 @@
+---
+title: "Semana1"
+author: "Stephany Michell Lobo Laguado"
+date: "11/6/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Get/set your working directory
+
+1. `getwd()`.
+2. `setwd()`.
+
+# Checking for and creating directories
+
+1. `file.exists()`.
+2. `dir.create()`.
+
+# Getting data from de internet
+
+Esto puede hacerse con lafunción `download.file()`.
+
+Los archivos que se descargan de internet pueden cambiar así que es importante poner la fecha en la que fueron descargados.
+
+# Leer archivos
+
+La función más general para leer archivos desde la memoria es `read.table()`. `read.csv()` es similar pero tiene argumentos por defecto `sep = ",", header = TRUE`.
+
+Algunos parámetros importantes son:
+
+* `quote`: si se tienen valores así; `quote = ""` significa que no hay.
+* `na.strings`: cambia el carácter que representa NA.
+* `skip`: número de filas a omitir antes de empezar a leer los datos.
+
+El paquete xlsx permite trabajar con este tipo de archivos, se pueden especificar las filas y columnas a ser leídas con los argumentos `colIndex` y `rowIndex`.
+
+`read.xlsx2()` es más rápido que `read.xlsx()` pero inestable al momento de leer subconjuntos de los datos.
+
+El paquete XLConnect tiene más opciones para escribir y manipular archivos excel, una quía: [XLConnect vignette](https://cran.r-project.org/web/packages/XLConnect/vignettes/XLConnect.pdf).
+
+
+
+
